@@ -1,5 +1,10 @@
-job('demo') {
-    steps {
-        shell('echo Hello World!')
+pipeline {
+    agent { label 'master' }
+    stages {
+        stage('build') {
+            steps {
+                echo "Hello World!"
+            }
+        }
     }
 }
